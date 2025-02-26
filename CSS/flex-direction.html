@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            border: 1px dashed black;
+        }
+
+        div{
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 2em;
+            color: white;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        div:nth-child(1){
+            background-color: yellowgreen;
+        }
+        div:nth-child(2){
+            background-color: violet;
+        }
+        div:nth-child(3){
+            background-color: cornflowerblue;
+            
+        }
+        section:nth-child(1){
+            background-color: pink;
+        }
+
+        /* 각각의 감싸고 있는 컨테이너에 주는 옵션 */
+        .row{
+            flex-direction: row;
+        }
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .column-reverse{
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h3>row</h3>
+    <section class="row">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+    
+    <section class="row-reverse">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+
+    <section class="column">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+
+    <section class="column-reverse">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+</body>
+</html>

@@ -7,23 +7,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Test</title> <!-- HTML 페이지의 제목, 브라우저 상단의 웹페이지 탭에 제목으로 노출 -->
+        <!-- rel = relationship : 연결하려는 파일과의 관계를 의미 -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body><!-- HTML문서에서 실질적으로 보이는 영역을 정의하는 구간 이미지, 글, 링크, 테이블, 동영상 등등... -->
         <!-- 코드 작성시 엔터를 눌러 줄바꿈을 시도했음에도 불구하고 실행화면에는 한줄로 연결된 채 나온다. -->
         
-        <img src="image/instagramlogo.png" width="150px">
-        <input value="검색">
+        <div id="top">
+            <img src="image/instagramlogo.png">
+            <input value="검색">
+            <div>
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-solid fa-compass"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
 
-        <div> <!-- 프로필 사진 및 이름 시작 -->
-            <img src="image/profile.jpg" width="50px">
+        <div id="profile"> <!-- 프로필 사진 및 이름 시작 -->
+            <div id="profile_pic">
+                <img src="image/profile.jpg" class="circle_pic">
+            </div>
 
         <!-- <br>태그는 줄바꿈 기능이 있다.-->
         <!-- <p>태그는 문단을 나누는 태그 paragraph의 약자이다.
             p태그는 줄바꿈을 표현하는 block이라는 속성이 있기 때문에
             옆에 글이 올 수 없다.-->
 
-            <div>
-                <h2>half_bottle</h2>
+            <div id="profile_info">
+                <div id="id">half_bottle</div>
                 <button>프로필 편집</button>
             </div>
         </div> <!-- 프로필 사진 및 이름 끝 -->
@@ -42,18 +55,18 @@
             </p>
         </div> <!-- 프로필 내용 끝 -->
         
-        <div> <!-- 하이라이트 영역 시작 -->
-            <div>
-                <div>
-                    <img src="image/hl1.jpg" width="35px">
+        <div id="highlight_area"> <!-- 하이라이트 영역 시작 -->
+            <div class="highlight">
+                <div class="highlight_pic">
+                    <img src="image/hl1.jpg" class="circle_pic">
                 </div>
                 <div>
                     😊
                 </div>
             </div>
-            <div>
-                <div>
-                    <img src="image/hl2.jpg" width="35px">
+            <div class="highlight">
+                <div class="highlight_pic">
+                    <img src="image/hl2.jpg" class="circle_pic">
                 </div>
                 <div>
                     😃
@@ -61,37 +74,49 @@
             </div>
         </div> <!-- 하이라이트 영역 끝 -->
 
-        <div> <!-- 게시물 팔로우 팔로잉 시작 -->
-                <div>
+        <div id="stat_bar"> <!-- 게시물 팔로우 팔로잉 시작 -->
+                <div class="stat">
                     게시물<br>
                     133
                 </div>
-                <div>
+                <div class="stat">
                     팔로워<br>
                     408
                 </div>
-                <div>
+                <div class="stat">
                     팔로우<br>
                     189
                 </div>
         </div> <!-- 게시물 팔로우 팔로잉 끝 -->
         
-        <div>아이콘이 들어갈 자리</div>
+        <div id="sub_icons">
+            <div class="selected"><i class="fa-solid fa-border-all"></i></div>
+            <div class="selected"><i class="fa-solid fa-film"></i></div>
+            <div class="selected"><i class="fa-solid fa-circle-play"></i></div>
+            <div class="selected"><i class="fa-solid fa-bookmark"></i></div>
+            <div class="selected"><i class="fa-solid fa-user-tag"></i></div>
+        </div>
 
         <div> <!-- 게시물 썸네일 영역 시작 -->
             <!-- 부모 너비의 32%값이 지정된다.
              퍼센트로 지정된 값은 화면 크기에 따라 유동적으로 바뀐다.
              창 크기의 변화에 맞춰 그때그때 화면의 정보나 크기가 함께
              바뀌는 웹 페이지를 반응형 웹이라고 한다. -->
-            <img src="image/thumbnails/1.jpg" width="32%">
-            <img src="image/thumbnails/2.jpg" width="32%">
-            <img src="image/thumbnails/3.jpg" width="32%">
-            <img src="image/thumbnails/4.jpg" width="32%">
-            <img src="image/thumbnails/5.jpg" width="32%">
-            <img src="image/thumbnails/6.jpg" width="32%">
-            <img src="image/thumbnails/7.jpg" width="32%">
-            <img src="image/thumbnails/8.jpg" width="32%">
-            <img src="image/thumbnails/9.jpg" width="32%">
+            <div class="thumbnail_grid">
+                <img src="image/thumbnails/1.jpg"class="thumbnail">
+                <img src="image/thumbnails/2.jpg"class="thumbnail">
+                <img src="image/thumbnails/3.jpg"class="thumbnail">
+            </div>
+            <div class="thumbnail_grid">
+                <img src="image/thumbnails/4.jpg"class="thumbnail">
+                <img src="image/thumbnails/5.jpg"class="thumbnail">
+                <img src="image/thumbnails/6.jpg"class="thumbnail">
+            </div>
+            <div class="thumbnail_grid">
+                <img src="image/thumbnails/7.jpg"class="thumbnail">
+                <img src="image/thumbnails/8.jpg"class="thumbnail">
+                <img src="image/thumbnails/9.jpg"class="thumbnail">
+            </div>
         </div> <!-- 게시물 썸네일 영역 끝 -->
 
     </body>

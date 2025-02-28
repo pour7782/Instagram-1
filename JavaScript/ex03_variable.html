@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //변수를 만드는 법
+        //1. 키워드 변수명; -> 빈 그릇만 만듦
+        //2. 키워드 변수명 = 데이터; -> 그릇을 만들며 물도 따라놓은 상태
+
+        //변수의 대입
+        //변수명 = 새로운 데이터;
+
+        //키워드
+        //var : 같은 이름의 변수가 만들어졌을 때 감지하지 못한다.(에러가 안난다.)
+        //lat : 같은 이름의 변수가 만들어졌을 때 감지한다. (에러가 난다.)
+        //ㄴ 새로운 값은 대입할 수 있다.
+        //const : 같은 이름의 변수가 만들어졌을 때 에러가난다. 대입이 불가능함.
+
+        //변수명 짓는 규칙
+        //1.첫글자로 영문자(a~z, A~Z), 밑줄(_), 달러기호($),로 시작해야한다. 숫자X
+        //2.대소문자를 구별한다.(home, Home)
+        //3.공백이나 특수문자를 포함할 수 없다.
+        //4.예약어 사용불가(if, for, while, const등) 자바스크립트에서 이미 사용중인 예약어는 변수명으로 사용할 수 없다.
+        //5.한글 절대 쓰지 않기
+
+        //권장사항
+        //의미있는 이름으로 짓기, 길어져도 상관없음
+        //나이 -> age, 주소 -> address
+
+        //변수명 표기법
+        //Camel Case(낙타 표기법)
+        //ex) homeAddress, totalScore, myAge ...
+        //Snake Case(스네이크 표기법)
+        //home_address, total_score, my_age ...
+        //Pascal Case(파스칼 표기법)
+        //모든 단어의 첫 글자를 대문자로 작성한다.
+        //HomeAddress, TotalScore, MyAge ...
+        //헝가리 표기법
+        //변수명을 지을 때 데이터의 타입이나 의미를 나타내는 접두사를 붙인다
+        //nCount, sDate
+
+        //변수를 사용하여 데이터를 관리하면 재사용성에 매우 유리하다
+        let n1 = 15;
+        let n2 = 10;
+        let s1 = "홍길동";
+
+        document.write("n1: " + n1 + "<br>");
+        document.write("n2: " + n2 + "<br>");
+        document.write(s1 + "<br>");
+        //데이터의 타입이 다를 때 + 기호는 연결의 의미를 갖는다.
+        document.write(n1 + n2 + "<br>");
+        //데이터의 타입이 같을 때 + 기호는 연산의 의미를 갖는다
+
+        document.write("15+10" + 1 + 1 + "<br>");
+        //코딩은 좌에서 우로 연산을 진행하기 때문에 다른 데이터타입의 "15+10"에 1을 더해서 "15+101"이라는 문자열 타입에 또 +1을 한거기 때문에 "15+1011"이 출력됨
+        document.write(1+1+"15+10" + "<br>");
+        //지금은 숫자타입 1+1을 먼저 진행하여 2가된 후 데이터타입인 "15+10"과 만나 "215+10"이 출력됨
+        document.write("15+10 = " + (n1+n2)+ "<br>");
+        //지금은 ()괄호를 먼저 진행후 진행되기 때문에 "15+10 = 25" 가 출력된다
+
+        let n3 //비어있는 그릇
+        document.write(n3 + "<br>");
+        //변수에 값이 할당되지 않았을 때 자동으로 undefined가 할당된다.
+        n3 = 3.14;
+        document.write(n3 + "<br>");
+        //n3에 3.14를 할당한 후 출력하면 3.14가 출력되는걸 알 수 있다.
+
+        let sum = n1 + n2;
+        //연산한 값을 변수에 대입할 수도 있다.
+
+        //정보 출력해보기
+        let name = "홍길동";
+        let age = 45;
+        let address = "인천시 부평구";
+        let cm = 184.5;
+
+        document.write(
+            "이름: " + name + "<br>"+ 
+            "나이: " + age + "<br>"+ 
+            "주소: " + address + "<br>"+ 
+            "키: " + cm + " cm<br>"
+        );
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

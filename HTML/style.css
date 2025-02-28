@@ -1,0 +1,155 @@
+body{
+    font-size: 3vw;
+}
+
+/* 썸네일을 포함하고 있는 div */
+.thumbnail_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* fr(fraction) : 사용 가능한 공간의 일부분, 비율로 공간을 나눈다고 생각하면 된다. */
+}
+
+/* 썸네일 이미지 */
+.thumbnail{
+    width: 100%;
+}
+
+/* 게시물, 팔로워, 팔로우 영역 */
+#stat_bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+/* 게시물, 팔로워, 팔로우 텍스트 중앙 정렬 */
+.stat{
+    text-align: center;
+}
+
+/* 프로필 사진의 컨테이너 */
+#profile_pic{
+    width: 15vw;
+    height: 15vw;
+}
+
+/* 하이라이트 사진의 컨테이너 */
+.highlight_pic{
+    width: 10vw;
+    height: 10vh;
+}
+
+/* 원형으로 만드려는 이미지 */
+.circle_pic{
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* 하이라이트 영역 grid 사용하여 정렬하기 */
+#highlight_area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.highlight{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 상단 로고, 검색, 아이콘 영역 */
+#top{
+    display: grid;
+    grid-template-columns: 4fr 7fr 4fr;
+    height: 10vh;
+    min-height: 10vw;
+    margin-bottom: 3vw;
+    border-bottom: 0.1px solid gray;
+}
+
+#top img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#top input{
+    height: 35%;
+    width: 95%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+#top div{
+    text-align: center;
+    padding-top: 3vw;
+}
+
+
+#top i{
+    font-size: 4vw;
+    margin-top: 2vw;
+    margin-left: auto;
+}
+
+/* 프로필 영역 */
+#profile{
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+}
+
+#profile_info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    height: 15vw;
+}
+
+#id{
+    font-size: 6vw;
+    font-weight: 100;
+}
+
+button{
+    height: 80%;
+    width: 95%;
+
+    font-size: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#sub_icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 5vw;
+    height: 8vw;
+}
+
+.selected{
+    border-bottom: 3px solid gray;
+}
+
+
+

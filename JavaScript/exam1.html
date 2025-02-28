@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //농구공이 23개가 있다.
+        //하나의 박스에 4개씩 들어갈 수 있다.
+        //총 필요한 박스의 개수를 구하세요
+
+        let basketball = 23, box  = 4;
+        let result = Math.ceil(basketball/box);
+        //result = basketball % box == 0 ? (basketball / box) : Math.ceil(basketball/box);
+        
+        document.write(basketball,"개 있는 농구공을", box,"개씩 들어가는 박스에 담으려면? : <br>")
+        document.write(result, "개의 박스가 필요하다.", "<br>");
+        document.write("<hr>");
+
+        //사각형의 면적과 둘레 계산하기
+        //가로 : 10
+        //세로 : 5
+
+        let width = 10, hight = 5;
+        let area = width * hight;
+        let circ = 2 * width + 2 * hight;
+
+        document.write("면적 : " + area, "<br>");
+        document.write("둘레 : " + circ, "<br>");
+        document.write("<hr>");
+
+        //숫자들의 평균 구하기
+        //숫자1 : 80
+        //숫자2 : 95
+        //숫자3 : 75
+
+        let num1 = 80, num2 = 95, num3 = 75;
+        let sum = (num1 + num2 + num3);
+        let avg = sum / 3;
+
+        document.write("80, 95, 75 세 숫자의 평균 : " +avg)
+        document.write("<hr>");
+
+        //하루의 총 시간을 초로 계산하기
+        let hour = 24, min = 60, sec = 60;
+        let day_sec = hour * min * sec;
+
+        document.write("하루를 초로 바꾸면 : " + day_sec);
+        document.write("<hr>");
+
+        //섭씨 온도를 화씨 온도로 변환하기
+        //화씨 = 섭씨 * 1.8 + 32
+        //25도를 화씨로 변환하여 출력하세요
+
+        let C = 25;
+        let F = C * 1.8 + 32;
+
+        document.write("섭씨 " + C + " = " + "화씨 " + F);
+        document.write("<hr>");
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

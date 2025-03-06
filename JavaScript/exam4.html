@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //원의 넓이를 구하는 circleArea 함수 만들기
+        //원의 둘레를 구하는 circleRound 만들기
+        //circleArea는 함수 안에서 출력하고 마무리
+        //circleRound는 둘레를 반환하기
+        //원의 넓이 : 3.14 * 반지름 * 반지름
+        //원의 둘레 : 2 * 3.14 * 반지름
+        function circleArea(x){
+            let area = x * x * 3.14;
+            document.write(`원의 넓이 : ${area}cm <sup>2</sup><br>`);
+        }
+        circleArea(5);
+        document.write(`<hr>`);
+
+        function circleRound(x){
+            let round = 2 * x * 3.14;
+            return round;
+        }
+        document.write(`원의 둘레 : ${circleRound(5)}cm<br>`);
+        document.write(`<hr>`);
+
+
+        //사칙연산을 하는 arithmetic함수 만들기
+        //두 숫자의 덧셈, 뺄셈, 곱셈, 나눗셈을 구하여 출력하기.
+        function arithmetic(x, y){
+            document.write(`${x}, ${y} 사칙연산 <br>`);
+            document.write(`${x} + ${y} = ${x+y}<br>`);
+            document.write(`${x} - ${y} = ${x-y}<br>`);
+            document.write(`${x} * ${y} = ${x*y}<br>`);
+            document.write(`${x} / ${y} = ${x/y}<br>`);
+        }
+        arithmetic(6, 2);
+        document.write(`<hr>`);
+
+
+        //fToc함수를 만들어 화씨를 섭씨로 바꿔서 출력하기.
+        //cTof함수를 만들어 섭씨를 화씨로 바꿔서 출력하기.
+        //화씨 -> 섭씨 : (화씨 - 32) / 1.8
+        //섭씨 -> 화씨 : 1.8 * 섭씨 + 32
+        function fToc(f){
+            let ftoc = (f - 32) / 1.8;
+            document.write(`화씨 : ${f}도 = 섭씨 : ${ftoc}도<br>`);
+            return fToc;
+        }
+        fToc(77);
+
+        function cTof(c){
+            let ctof = 1.8 * c + 32;
+            document.write(`섭씨 : ${c}도 = 화씨 : ${ctof}도<br>`);
+            return cTof;
+        }
+        cTof(30);
+        document.write(`<hr>`);
+
+        
+        //1~9 사이의 정수를 전달하여 해당 구구단을 출력하는 showTable함수 작성하여 화면에 출력하기
+        function showTable(x){
+            document.write(`구구단 ${x}단<br>`);
+            for(let i = 1; i < 10; i++){
+                document.write(`${x} X ${i} = ${x*i}<br>`);
+            }
+            return showTable;
+        }
+        showTable(4);
+        document.write(`<hr>`);
+
+
+        //매개변수로 임의의 숫자를 전달하여 1~N 까지의 총 합을 구하는 total함수를 만들고
+        //값을 반환하여 화면에 출력하기
+        function total(x){
+            let sum = 0;
+            for(let i = 1; i <= x; i++){
+                sum += i;
+            }
+            return sum;
+        }
+        document.write(`1~N 까지의 총 합은 ${total(10)} 입니다.<br>`);
+        document.write(`<hr>`);
+
+
+        //N~M까지의 총합
+        //N이 M보다 큰 경우 자리를 바꿔서 총 합 구하기 ex) 1~5까지 합이나 5~1까지 합이 같아야함
+        function total2(n, m){
+            let sum = 0;
+            if(n > m){
+                for(let i = m; i <= n; i++){
+                sum += i;
+                }
+                return sum;
+            } else{
+                for(let i = n; i <= m; i++){
+                sum += i;
+                }
+                return sum;
+            }
+        }
+        document.write(`N~M 까지의 총 합은 ${total2(32, 24)} 입니다.<br>`);
+        document.write(`<hr>`);
+
+
+        //숫자들이 담긴 배열을 매개변수로 받아, 배열 내 최대값을 반환하는 Max_arr함수 만들기
+        let m = new Array();
+        function Max_arr(m){
+            let max = m[0]
+            for(let i = 0; i < m.length; i++){
+                if(m[i] > max){
+                    max = m[i];    
+                }
+            }
+            return max;
+        }
+        document.write(`배열 m 의 최대값은 : ${Max_arr([2,3,51,6,7,8,99])}이다. <br>`);
+        document.write(`<hr>`);
+
+        //문자열 뒤집기
+        //문자열을 매개변수로 받아 해당 문자열을 뒤집어 반환하는 함수 reverse를 작성하세요
+        function reversed(s){
+            let str = s;
+            let reversed = "";
+            for(let i = str.length-1; i >= 0; i--){
+                reversed += str[i];
+            }
+            document.write(reversed);
+        }
+        reversed("hello");
+        document.write(`<hr>`);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

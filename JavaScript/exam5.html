@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //input에 단을 입력하고 계산시작을 누르면 아래에 구구단 나오게 하기
+        //innerHTML -> 문자열과 태그 같이 사용
+        //만약 input에 값이 입력이 안되었다면 "값을 입력해주세요" 출력
+        //만약 input에 1이하 또는 10이상이 입력되었다면 "2~9 사이의 값을 입력해주세요"
+        //숨기기버튼 누르면 아래 출력된 구구단을 숨기면서 버튼에 쓰여진 value를  "보이기"로 바꾸기
+        let Mul = () => {
+            let input = document.querySelector('#num').value; //input에 입력받은 수를 저장
+            let mul = input => {return x*2};
+            let mul_div = document.querySelector('#mul_div');
+            mul_div.textContent = input;
+        }
+    </script>
+</head>
+<body>
+    단:
+    <input id="num">
+    <input type="button" value="계산시작" id="mul" onclick="Mul()">
+    <input type="button" value="숨기기" id="hide">
+    <hr>
+    <div id="mul_div">
+
+    </div>
+</body>
+</html>

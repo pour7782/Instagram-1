@@ -12,10 +12,15 @@
         //숨기기버튼 누르면 아래 출력된 구구단을 숨기면서 버튼에 쓰여진 value를  "보이기"로 바꾸기
         let Mul = () => {
             let input = document.querySelector('#num').value; //input에 입력받은 수를 저장
-            let mul = input => {return x*2};
             let mul_div = document.querySelector('#mul_div');
-            mul_div.textContent = input;
+            mul_div.textContent = mul(input);
         }
+
+        let mul = (input) => {
+                for(i = 1; i < 10; i++){
+                    document.writeln(`${input} X ${i} = ${input*i}<br>`);
+                }
+            };
     </script>
 </head>
 <body>

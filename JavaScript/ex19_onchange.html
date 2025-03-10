@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //onchange
+        //입력 상자에 값을 입력한 후 포커스를 잃었을때 이벤트가 발생한다.
+        function handleChange(){//onchange
+            let value = document.querySelector("#inputBox").value;
+            document.querySelector("#result").textContent = "입력된 값 : " + value;
+        }
+
+        function handleinput(){//oninput
+            let value = document.querySelector("#oninputBox").value;
+            document.querySelector("#result2").textContent = "입력된 값 : " + value;
+        }
+
+        function handleMouseOver(){//onmouseover
+            document.querySelector("#hoverResult").textContent = "마우스가 요소 위에 있습니다."
+        }
+        function handleMouseOut(){//onmouseout
+            document.querySelector("#hoverResult").textContent = "마우스가 요소를 벗어났습니다."
+        }
+
+        function handleDoubleClick(){
+            document.querySelector("#dbleClickResult").textContent = "이걸 진짜 누르네."
+        }
+    </script>
+</head>
+<body>
+    <!-- onchange는 입력후 다른곳을 찍어야 입력이 되고 oninput은 입력하면 바로 된다. -->
+    <h2>onchange 예제</h2>
+    <p>입력 상자에 값을 입력한 후 포커스를 다른쪽으로 이동하면 onchange 이벤트 발생</p>
+    <input id="inputBox" onchange="handleChange()" placeholder="여기에 입력하세요">
+    <div id="result"></div>
+
+    <hr>
+
+    <h2>oninput 예제</h2>
+    <p>입력 상자에 값을 입력할때 oninput 이벤트 발생</p>
+    <input id="oninputBox" oninput="handleinput()" placeholder="여기에 입력하세요">
+    <div id="result2"></div>
+
+    <hr>
+    
+    <h2>마우스 오버/ 아웃 이벤트</h2>
+    <div onmouseover="handleMouseOver()" onmouseout="handleMouseOut()"
+        style="width: 200px; height: 50px; background-color: #faa2ef; text-align: center; line-height: 50px;">
+        마우스를 올려보세요
+    </div>
+    <p id = "hoverResult"></p>
+
+    <hr>
+
+    <h2>더블클릭 이벤트</h2>
+    <button ondblclick="handleDoubleClick()">더블클릭 해보세요</button>
+    <p id="dbleClickResult"></p>
+</body>
+</html>

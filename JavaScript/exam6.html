@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = 1;
+        let path = "image/img";
+
+        function prev(){
+            num--;
+            if(num < 1){
+                num = 7;
+            }
+            //눌렀을때 img태그에 src에 들어있는 경로를 수정을 해줘야 함
+            let prev_img = document.querySelector("#gallery");
+            prev_img.src = `${path+num}.jpg`;
+        }
+
+        function next(){
+            num++;
+            if(num > 7){
+                num = 1;
+            }
+
+            let next_img = document.querySelector("#gallery");
+            next_img.src = `${path+num}.jpg`
+        }
+
+        setInterval("next()", 4000);
+        //각 호출 사이에 고정된 시간으로 함수를 반복적으로 호출할 수 있다.
+        //1000ms가 1초 이다
+        
+    </script>
+</head>
+<body>
+    <div id="galleryWrap">
+        <a href="#" onclick="prev()">
+            <img alt="이전" src="image/left_btn.png">
+        </a>
+        <img alt="갤러리" id="gallery" src="image/img6.jpg" width="300px" height="250px">
+        <a href="#" onclick="next()">
+            <img alt="다음" src="image/right_btn.png">
+        </a>
+    </div>
+</html>

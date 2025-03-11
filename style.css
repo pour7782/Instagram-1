@@ -36,10 +36,11 @@ body{
     height: 15vw;
 }
 
-/* 하이라이트 사진의 컨테이너 */
+/* 하이라이트 사진의 컨테이너 - 프로필 하이라이트 이미지를 담는 영역 */
 .highlight_pic{
-    width: 10vw;
-    height: 10vh;
+    width: 15vw;    /* 뷰포트 너비의 15%로 설정하여 화면 크기에 따라 반응형으로 조절됨 */
+    height: 15vw;   /* 너비와 동일한 값을 사용하여 정사각형 형태 유지 */
+    margin-bottom: 1vw;  /* 하단 여백을 뷰포트 너비의 1%로 설정하여 반응형 간격 유지 */
 }
 
 /* 원형으로 만드려는 이미지 */
@@ -52,16 +53,23 @@ body{
     height: 100%;
 }
 
-/* 하이라이트 영역 grid 사용하여 정렬하기 */
+/* 하이라이트 영역 전체를 감싸는 컨테이너 */
 #highlight_area{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: grid;   /* 그리드 레이아웃을 사용하여 하이라이트 항목들을 배치 */
+    grid-template-columns: repeat(5, 1fr);   /* 5개의 동일한 크기의 열을 생성하여 하이라이트를 균등하게 배치 */
+    gap: 2vw;   /* 하이라이트 항목들 사이의 간격을 뷰포트 너비의 2%로 설정 */
+    padding: 2vw;    /* 전체 하이라이트 영역의 안쪽 여백을 뷰포트 너비의 2%로 설정 */
 }
+
+/* 각각의 하이라이트 항목을 감싸는 컨테이너 */
 .highlight{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;  /* 하이라이트 내부의 텍스트를 중앙 정렬 */
+    display: flex;   /* 플렉스박스를 사용하여 내부 요소들을 수직으로 정렬 */
+    flex-direction: column;  /* 하이라이트 이미지와 텍스트를 세로 방향으로 배치 */
+    align-items: center;    /* 하이라이트 내부 요소들을 가로축 기준으로 중앙 정렬 */
+    font-size: 3vw;    /* 하이라이트 텍스트의 크기를 뷰포트 너비의 3%로 설정하여 반응형으로 조절 */
 }
+
 /* 상단 로고, 검색, 아이콘 영역 */
 #top{
     display: grid;

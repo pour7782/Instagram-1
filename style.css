@@ -132,8 +132,7 @@ body{
 button{
     height: 80%;
     width: 95%;
-
-    font-size: 10px;
+    font-size: 2vw;
     background-color: white;
     border: 1px solid gray;
     border-radius: 5px;

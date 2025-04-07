@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
     let name_input = document.querySelector("name_input");
     let email_input = document.querySelector("email_input");
 
+    let id = [\w],{4,20};
     id_input.addEventListener("submit", (e) => {
-        if([\w]{4,20} == false){
+        if( == false){
 
         }
     })

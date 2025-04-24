@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <style>
+        body{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background-color: azure;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login{
+            padding: 40px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .login img{
+            padding: 60px;
+            margin-left: 60px;
+            width: 150px;
+            height: 150px;
+            
+        }
+        .login input{
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        #login_btn{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: darkblue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #login_btn a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .auto{
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        #h{
+            color: gray;
+        }
+
+
+    </style>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="login">
+        <img src="http://www.koreastudyroom.com/img/login_logo.jpg" alt="login_logo">
+        <input type="ID" placeholder="계정">
+        <input type="PW" placeholder="비밀번호">
+        <button id="login_btn" type="button"><a href="board.html">로그인</a></button>
+        <div class="auto">
+            <input type="checkbox" id="check_btn1"/>
+            <label for="check_btn1">자동 로그인</label>
+            <input type="checkbox" id="check_btn2"/>
+            <label for="check_btn2">비밀번호 저장</label>
+        </div>
+        <a id="h">환경설정</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup_container{
+    padding: 40px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.signup_container #signup_id, #signup_pw, #signup_name, #signup_email{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.signup_container img{
+    padding: auto;
+    margin: auto;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.signup_container label{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.signup_container p{
+    margin-top: 1px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: gray;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#signup_btn{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#idfal{
+    display: none;
+}
+
+#idsuc{
+    display: none;
+}

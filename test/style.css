@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container{
+    max-width: 400px;
+    margin: 50px auto; /*가운데 정렬*/
+    padding: 0 20px;
+    text-align: center;
+}
+
+.logo{
+    width: 64px; /*가로*/
+    height: 64px; /*세로*/
+    margin: 0 auto 20px auto; /*정렬*/
+}
+
+.form-group{
+    text-align:left;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+input{
+    width:100%;/*부모영역의 100%만큼 차지하겠다*/
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+small{
+    color:#777;
+    font-size: 12px;
+    margin-top:5px;
+    display:block;
+}
+
+.submit-btn{
+    background-color: #f39c12;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;/*모서리를 둥글게*/
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+

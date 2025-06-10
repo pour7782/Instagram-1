@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 제어문(control-statement)
+        // 실행문의 순서를 변경하는 것으로 조건문과 반복문이 있다.
+        // 조건문: if, switck
+        // 반복문 : for, while
+
+        // 조건문
+        // 조건식에 따라 프로그램의 흐름을 제어할 수 있는 문법
+        
+        // 조건식 : 참인지 거짓인지 판별할 수 있는 식
+        // if문
+        // if(조건식) {
+        //    조건식이 참일 때 실행 할 명령;
+        // }
+
+        let q = 10;
+
+        if (q == 10){
+            document.write("q는 10입니다 <br>");
+        }
+
+        document.write("x: " ,x);
+        // 변수의 유효 범위(scope)
+        // var 코드블럭 안에서 생성해도 밖에서 사용할 수 있다.
+        if(true){
+            var variable = 1;
+        }
+        console.log(variable); //1;
+
+        // let, const
+        // let, const 블럭레벨의 유효 범위를 가지기 때문에 다른 변수로 인식
+        if(true){
+            let y = 5; //지역 변수
+        }
+
+        // console.log(y); //y의 값을 출력
+
+        // age 변수에 임이의 값으로 초기화 후
+        // 20세 이상이면 "성인입니다" 콘솔에 출력하기
+
+        let agee = 20;
+
+        if(agee >= 20){
+            console.log("성인입니다")
+        }
+        
+        // if - else
+        // 참일 때 실행 할 명령, 거짓일 때 실행할 명령
+        // if(조건식) {
+        //    조건식이 참일 때 실행 할 명령;
+        // } else{
+        //    조건식이 거짓일 때 실행할 명령;
+        // }
+
+        let num = 5;
+        if(num > 4){
+            console.log(`${num}은 4보다 큽니다`);
+        } else {
+            console.log(num + "은 4보다 작습니다");
+        }
+
+        // 템플릿 리터널
+        // 표현식의 값을 문자열을 추가하거나 여러줄의 문자역을 표현할 수 있다.
+
+        let a = 2;
+        let b = 3;
+        //  2 + 3 + 5
+        console.log(` ${a} + ${b} = ${a+b} `);
+
+        let c = 10;
+        let d = 7;
+        let max = 0;
+
+        // 10 과 7중 큰 수는 10입니다
+
+        if(c > d){
+            max = c;
+            console.log(` ${c}와 ${d} 중 큰 수는 ${max}입니다.`);
+        } else {
+            max = d;
+            console.log(` ${c}와 ${d} 중 큰 수는 ${max}입니다.`);
+        }
+
+        // x개의 농구공을 담기 위한 박스의 개수 구하기
+        // 하나의 박스에는 4개씩 담을 수 있다.
+        
+        let ball = 21;
+        let box = 0;
+        
+        if(ball / 4 == 0){
+            box = ball / 4;
+        } else{
+            box = Math.ceil(ball / 4);
+        }
+        console.log(`박스의 개수 ${box}개`);
+        
+        // if - else if - else
+
+        // if(조건식1){
+        //      조건식 1일 참일 때 실행할 문장
+        // } else if(조건식2) {
+        //      조건식1이 거짓이고 조건식2가 참일 때 실행할 문장
+        // } else{
+        //      모든 조건이 맞지않을 때 실행할 문장
+        // }
+
+        let favorite = 7;
+        if(favorite < 5 ){
+            console.log(`좋아하는 숫자가 5보다 작습니다.`)
+        } else if(favorite > 5){
+            console.log(`좋아하는 숫자가 5보다 큽니다.`)
+        } else { //필요없다면 생략이 가능하다
+            console.log(`좋아하는 숫자는 5입니다.`)
+        }
+
+        // 효율적인 흐름으로 제어하기 위해 if문과 else if문의 조건문의 위치를 잘 생각해야한다
+        if(favorite > 5){
+            console.log(`좋아하는 숫자는 5보다 큽니다.`)
+        } else if(favorite == 7){ 
+            console.log(`좋아하는 숫자는 7입니다.`)
+        }
+
+        // 임의의 나이를 age에 대입하고 20살 이상이면 '성인입니다.'
+        // 17살 이상이면 '청소년입니다.'
+        // 6살 이상이면 '어린이 입니다.'
+        // 아래로는 '유아입니다.'
+
+        let age = 20;
+        if(age >= 20){
+            console.log(`성인입니다.`)
+        } else if (age > 17){
+            console.log(`청소년입니다.`)
+        } else if (age > 6){
+            console.log(`어린이입니다.`)
+        } else {
+            console.log(`유아입니다.`)
+        }
+
+        // 90점 이상은 a
+        // 80점 이상은 b
+        // 70점 이상은 c
+        // 60점 이상은 d
+        // 나머지는 f
+
+        let score = 75;
+        
+        if(score >= 90){
+            console.log("A")
+        } else if(score >= 80){
+            console.log("B")
+        } else if(score >= 70){
+            console.log("C")
+        } else if(score >= 60){
+            console.log("D")
+        } else{
+            console.log("F")
+        }
+
+        // if문의 중첩
+        // 제어문은 중첩해서 자유롭게 사용 가능
+
+        // if문 안에 if문이 있는 경우
+        // if(조건식1){
+        //      if(조건식2){
+        //          
+        //    }
+        // }
+
+        let num1 = 5;
+        if(num1 <= 10){
+            if(num1 % 2 == 1){
+                console.log(`${num1}은 10보다 작은 홀수입니다.`)
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <input placeholder="입력">
+    <button>
+        입력
+    </button>
+    <br>
+    <br>
+    (❁´◡`❁)
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h3{
+    text-align: center;
+    font-size: 10;
+}
+
+input{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-family: 15px;
+    margin-top: 15px;
+}
+
+.name_input{
+    margin-bottom: 10px;
+}
+
+.user-id, .user-pw, .user-email{
+    color: gray;
+}
+
+button{
+    color: orange;
+}
+
+

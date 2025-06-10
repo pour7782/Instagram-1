@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: 40;
+            font-size: 30;
+        }
+
+        .asdf{
+            color: white;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table{
+            width: 600;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr, td{
+            height: 50;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(1){
+            text-align: center;
+            background-color: navy;
+        }
+
+        textarea{
+            width: 400;
+            height: 250;
+        }
+
+        tr:nth-child(2) input{
+            width: 150;
+            height: 50;
+        }
+
+        tr:nth-child(2) button{
+            width: 150;
+            height: 50;
+            border-radius: 5px;
+            font-size: 15px;
+            margin-left: 8;
+        }
+
+        td:nth-child(1){
+            width: 25%;
+            font-size: 20px;
+            padding-left: 15px;
+            
+        }
+
+        .ok_button{
+            background-color: navy;
+            width: 100;
+            height: 50;
+            border-radius: 4px;
+            display: block;
+            display: flex;
+            align-items: center;
+            margin: 0px 0px 0px 15px;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <h1>개인정보입력 폼</h1>
+    <table>
+        <tr>
+            <th class="asdf">
+                개인정보
+            </th>
+        </tr>
+        <tr>
+            <td>
+                주민번호 입력
+            </td>
+            <div>
+                
+                
+            </div>
+        </tr>
+        <tr>
+            <td>
+                생일
+            </td>
+            <td>
+                <div>
+                    <input type="text"><span>년</span>
+                    <input type="text"><span>월</span>
+                    <input type="text"><span>일</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                성별
+            </td>
+            <td>
+                <div>
+                    <input type="radio"><span>남자</span>
+                    <input type="radio"><span>여자</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                관심분야
+            </td>
+            <td>
+                <div>
+                    <input type="checkbox"><span>여행</span>
+                    <input type="checkbox"><span>영화</span>
+                    <input type="checkbox"><span>독서</span>
+                    <input type="checkbox"><span>음악</span>
+                    <input type="checkbox"><span>관심없음</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                자기소개
+            </td>
+            <td>
+                <div>
+                    
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div>
+        <button class="ok_button">수정완료</button>
+    </div>
+</body>
+</html>

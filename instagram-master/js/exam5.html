@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gugudan(){
+            let dan = document.querySelector('#dan').value
+
+            if(dna.trim() == ' '){
+                alert(' 값을 입력해야합니다. ');
+                return; //함수를 빠져나감
+            }
+
+            if(dan < 2 || dna > 9){
+                alert(' 2~9사이의 값만 입력해주세요. ');
+                return;
+            }
+
+            //구구단 계산
+            str = " ";
+            for(let i = 1; i < 10; i++){
+                str += `${dan} * ${i} = ${dan * i} <br>`;
+            }
+
+            let g_div = document.querySelector('#disp');
+            g_div.innerHTML = str;
+        }
+
+        //두가지 선택지가 있으면 논리형으로 만드는게 좋음
+        let b_show = true;
+        function show(){
+
+            b_show = !b_show;
+            // input 버튼에 쓰여진 value값의 반경
+            document.querySelector('#bt_show').value = b_show ? '숨기기' : '보이기';
+
+            document.querySelector('#disp').style.display = b_show ? 'block' : 'none';
+        }
+
+        //햄북이햄북 햄북어 햄북스딱스 함부르크 햄부가우가 햄비기햄부가 햄부가티 햄부기온앤온을 차려오거라
+
+        function cal(op){
+            // document.querySelector("su1").value; -> 자료형은 무조건 문자형
+            let su1 = parseInt(document.querySelector("su1").value);
+            let su2 = parseInt(document.querySelector("su2").value);
+            let reslut = document.querySelector('#reslut');
+
+            if(op === '+'){
+                reslut.value = su1 + su2;
+            }else if (op === '-'){
+                reslut.value = su1 - su2;
+            }else if (op === '*'){
+                reslut.value = su1 * su2;
+            }else if (op === '/'){
+                reslut.value = su1 / su2;
+            }
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    더버욥
+    <p>
+        단:
+        <input id = "dan">
+        <input type="button" value="계산시작" onclick="gugudan()">
+        <input type="button" id = "b_show" value="숨기기" onclick="show()">
+    </p>
+    <hr>
+    <div id = "disp">
+
+    </div>
+    <hr>
+    <!-- 게산기 만들기 -->
+
+    <table border="1">
+        <tr>
+            <th class="su">수1</th>
+            <td><input id="su1" placeholder="정수만 입력하시오"></td>
+        </tr>
+        <tr>
+            <th class="su">수2</th>
+            <td><input id="su2" placeholder="정수만 입력하시오"></td>
+        </tr>
+        <tr>
+            <td class="op" clcolspan="2">
+                <input type="button" value="+" onclick="cal('+')">
+                <input type="button" value="-" onclick="cal('-')">
+                <input type="button" value="*" onclick="cal('*')">
+                <input type="button" value="/" onclick="cal('/')">
+            </td>
+        </tr>
+        <tr>
+            <th>결과</th>
+            <td><input id="reslut" readonly></td>
+        </tr>
+    </table>
+</body>
+</html>

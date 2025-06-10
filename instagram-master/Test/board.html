@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100;
+            display: flex;
+            align-items: center;
+        }
+
+        .main_title{
+            background-color: rgb(red, green, blue);
+            width: 700;
+            height: 300;
+        }
+        h2{
+            margin-bottom: 15;
+            margin-top: 20;
+            
+
+        }
+
+        table{
+            border: 3px solid gray;
+            margin: 0px 0px 0px 30px;
+            border-collapse: collapse;
+        }
+
+        tr,td{
+            width: 150;
+            height: 30;
+            border-bottom: 1px solid black;
+        }
+
+        tr:nth-child(1){
+            background-color: gray;
+        }
+
+        tr th{
+            text-align: start;
+        }
+
+        tr:nth-child(2){
+            width: 30%;
+        }
+
+        tr:nth-child(5){
+            width: 30;
+        }
+
+        tr:nth-child(1){
+            border-top: 5px solid rgb(130, 130, 130);
+        }
+
+        tr:nth-child(6){
+            border-top: 5px solid rgb(130, 130, 130);
+        }
+
+        tr:hover{
+            background-color: rgb(red, green, blue);
+        }
+
+        .logout{
+            display: flex;
+            justify-content: center;
+        }
+
+        .logout button{
+            background-color: navy;
+            color: white;
+            width: 100;
+            height: 50;
+            border-radius: 3px;
+            
+        }
+
+    </style>
+
+    
+</head>
+<body>
+    <div class="main_title">
+        <h2>자유게시판</h2>
+        <table>
+            <tr>
+                <th>순번</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th>이용후기</th>
+                <th>존윅</th>
+                <th>2021-04-22</th>
+                <th>20</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>게시판 이용 문의</th>
+                <th>제임스</th>
+                <th>2021-04-22</th>
+                <th>15</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>가입인사</th>
+                <th>존윅</th>
+                <th>2021-04-21</th>
+                <th>7</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>[필독]게시판 이용안내</th>
+                <th>매니저</th>
+                <th>2021-04-21</th>
+                <th>94</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>[긴급]공지사항</th>
+                <th>관리자</th>
+                <th>2021-04-20</th>
+                <th>85</th>
+            </tr>
+        </table>
+
+        <div class="logout">
+            <button>로그아웃</button>
+            <button class="reset"><a href="personal_info.html">개인정보 수정</a></button>
+        </div>
+        
+
+    </div>
+</body>
+</html>

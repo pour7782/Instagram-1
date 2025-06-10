@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 화면</title>
+  <style>
+    /* 전체 페이지 설정: 중앙 정렬 및 배경색 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    /* 로그인 컨테이너 설정 */
+    .login-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      /* 그림자 제거: box-shadow 속성 삭제 */
+      width: 300px;
+    }
+    
+    /* 타이틀 스타일 */
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    /* 폼 내부 요소를 세로로 나열 */
+    .login-container form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* 레이블 스타일 */
+    .login-container label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    /* 입력 필드 스타일 */
+    .login-container input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .login-container input:focus {
+      outline: none;
+      border-color: #3f29ef;
+    }
+    
+    /* 로그인 버튼 스타일 */
+    .login-container button {
+      padding: 10px;
+      background: #3f29ef;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      /* 트랜지션 제거: transition 속성 삭제 */
+    }
+    
+    .login-container button:hover {
+      background: #2e1cb3;
+    }
+    
+    /* 회원가입 링크 스타일 */
+    .login-container .signup-link {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    .login-container .signup-link a {
+      color: #3f29ef;
+      text-decoration: none;
+    }
+
+    .signup-container button.signup-btn:hover{
+      background-color: #3f29ef;
+    }
+
+    .signup-link{
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .signup-link a{
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>로그인</h2>
+    <form action="#" method="POST">
+      <label for="username">아이디</label>
+      <input type="text" id="username" name="username" placeholder="아이디 입력" required>
+      
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" name="password" placeholder="비밀번호 입력" required>
+      
+      <button type="submit">로그인</button>
+    </form>
+    <div class="signup-link">
+      아직 회원이 아니신가요? <a href="#">회원가입</a>
+    </div>
+  </div>
+</body>
+</html>

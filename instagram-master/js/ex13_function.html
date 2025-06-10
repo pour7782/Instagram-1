@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 자바스크립트에서 제공하는 함수
+        // 별도의 객체없이 바로 호출해서 사용할 수 있음
+
+        // eval()
+        //문자열로 표현된 자바스크립트 코드를 실행시키는 함수
+        let x = 10, y = 9;
+        let a = eval('x + y');
+        let b = eval('y * 3');
+        console.log(a)
+        console.log(y)
+
+        // 배개변수로 전달 된 값이 유한한 수인지 검사하여 결과를 변환
+        // 유한  T  무한F
+        console.log(isFinite(123))
+        console.log(isFinite(123e100))
+        console.log(isFinite("문자열")) // 인수로 전달 된 값이 숫자가 아니면 숫자로 전환
+
+        // innan()
+        // 매개변수로 변환한 값이 NaN인지검사하여 결과를 반환
+        // 인수로 전달 된 것이 값이 숫자 아니면 숫자로 변환
+        // 숫지기 아니면 T 맞으면 F
+        console.log(isNaN(123))
+        console.log(isNaN("123"))
+        console.log(isNaN("문자열"))
+
+        // faraeFloat()
+        // 문자열을 읽어서(파싱) 실수(숫자)로 변환
+        console.log(parseFloat(123))
+        console.log(parseFloat("123"))
+        console.log(parseFloat("문자열"))
+
+        //parseInt()
+        //문자열을 읽어서 정수로 변환
+        console.log(perseInt(123))
+        console.log(perseInt("123"))
+        console.log(perseInt("문자열"))
+
+        // 두번째 인자로 특성진법을 전달하면 해당 진법에 맞는 정수로 젼환한다.
+        console.log(perseInt("10", 10))
+
+        // encodeURI()
+        // URI에서 주소를 표시하는 특수문자를 제외하고
+        // 이스케이프 시퀀스 처리하여 무효화 한다.
+        
+        0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

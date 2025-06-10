@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type = "text">
+
+    <script>
+        // HTML 요소의 선택
+        // 자바스크립트로 HTML요소를 제어하려면 HTML 태그르 먼저 선택해야한다.
+        // document객체 -> body라고 보면 됨
+
+        // 1. input태그를 제어하기 위해 먼저 선택을 해야함
+        // querySelector -> 중복되는 요소가 있을 떄 첫번째 요소를 선택
+        // querySelectorALL -> 해당요소를 모두 선택하여 배열로 저장
+        let input = document.querySelector('input[type=text]');
+        console.log(input);
+        // let [id, pw, name, tell] = input;
+        
+        if(!input.hasAttribute('value')){
+            input.setAttribute('value', 'hello');
+        }
+    </script>
+</body>
+</html>

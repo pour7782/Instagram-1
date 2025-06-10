@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 웹페이지 내에서 다른 웹페이지를 삽입하는 태그
+     현재 페이지 안에 또 다른 html페이지나 외부 콘텐츠(유튜브 영상, 지도 등를 불러올 수 있다. -->
+     <h1>웹페이지 삽입하기</h1>
+     <iframe src="https://www.naver.com" width="800" height="500"></iframe>
+     <hr>
+     <h1>유튜브 영상 삽입</h1>
+     <iframe src="https://www.youtube.com/embed/N_g3AiXF-q8?si=AadjCZCUG6nSvVpR"
+        width="560"
+        height="315"
+     ></iframe>
+     <hr>
+     <h1>구글 지도 삽입하기</h1>
+     <!-- loading="lazy" 페이지가 처음 로드 될 때 iframe의 컨텐츠를
+      바로 로드하지 않고 사용자가 스크롤을 내려 해당 위치에 더달 했을 때 로드한다. -->
+     <iframe
+        weidth="600"
+        height="450"
+        style="border: 0"
+        loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.2309023276775!2d126.9257210764288!3d37.52605392644748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b45c3d89d7801%3A0x7883571cabf15b8b!2z642U7ZiE64yAIOyEnOyauA!5e0!3m2!1sko!2skr!4v1740380774353!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="table.html" width="600" height="400"></iframe>
+
+    <iframe src="table.html" width="400" height="300" srcdoc="
+        <html>
+            <body>
+                <h2>내장된 html</h2>
+                <p>dl 'iframe'은 내부적으로 HTML을 포함하고 있음!</P>
+            </body>
+        <html>">
+    </iframe>
+    <!-- 주의해야 할 점
+   1.일부사이트는 iframe삽입을 차단함
+   2. 반응형 웹 디자인에 적절하지 않음 -> 너비와 높이가 고정 되어 있으니까 레이아웃이 깨질 수 있음
+   css이용해서 반응형으로 바꿀 수 있다.
+     3.seo(검색 엔진 최적화)가 불리할 수 있다. -> iframe 안에있는 내용은 검색엔진이 못 읽어서 -->
+    <hr>
+    <audio controls>
+        <source src="파일명" type="audio/mpeg">
+        브라우저가 태그를 지원하지 않습니다.
+    </audio>
+
+    <hr>
+    <video controls width="600">
+        <source src="비디오경로" type="video/mp4">
+        브라우저가 비디오태그를 지원하지 않습니다.
+    </video>
+    
+</body>
+</html>

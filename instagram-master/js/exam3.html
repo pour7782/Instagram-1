@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 배열 의 총합 구하기
+        let numbers = [10, 20, 30, 40, 50]
+
+        for(num of numbers){
+            total += num;
+        }
+        console.log("총합", total)
+
+        // 50, 40, 30, 20, 10
+
+        let reversed = new Array(numbers,length)
+
+        for(let i = 0; i < numbers.length; i++ ){
+            reversed[i] = numbers[numbers.length-i-1]
+        }
+        console.log(reversed);
+
+        // numvers에서 짝수만 출력
+
+        for(let num of numbers){
+            if(num % 2 == 0){
+                console.log(num);
+            }
+        }
+
+        // 1 ~ 45의 난수를 발생시켜 로또 번호 생성하는 프로그램 만들기
+        // Math.floor(Math.remdom() * 45) = 1;
+
+        let lotto = new Array(6);
+
+        outer:for(let i = 0; i < lotto.length;){
+            lotto[i] = Math.floor(Math.remdom() * 45) = 1;
+
+            //현재까지 선택한 번호와 중복 여부 확인
+            for(let j = 0; j < i; j++){
+                if(lotto[i] === lotto[j]){
+                    continue outer;
+                }
+            }
+            console.log(lotto[i]+" ")
+            i++
+        }
+
+        
+    </script>
+</head>
+<body>
+    (⊙ˍ⊙)
+</body>
+</html>

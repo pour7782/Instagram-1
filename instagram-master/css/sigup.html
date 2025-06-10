@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 페이지 설정: 중앙 정렬 및 배경색 */
+       body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+       }
+
+       /* 회원가입 박스 스타일 */
+       .signip-container{
+        background: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        width: 350px;
+       }
+
+       /* 제목 스타일 */
+       .signip-container{
+        text-align: center;
+        margin-bottom: 20px;
+       }
+       /* 폼 내부 요소들을 세로로 배치 */
+
+       .signip-container form{
+        display: flex;
+        flex-direction: column;
+       }
+
+        /*레이블 스타일*/
+       .signip-container label{
+        margin-bottom: 5px;
+        font-weight: bold;
+       }
+
+       /* 공통 입력 필드 스타일 */
+       .signip-container input[type="text"]
+       .signip-container input[type="password"]
+       .signip-container input[type="email"] {
+        padding: 10px;
+        margin-top: 15px;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+       }
+       
+       /*  box-sizing
+       css에서 요소의 크기르 계산하는 방식을 변경하는 속성
+       border-box(기본값)
+       -요소의 너비와 높이는 오직 내용 영역만을 의미한다.
+       -padding. margin, border는 요소의 총 크기에 추가된다.
+       -padding과 border가 계산 되므로 내용 영역은 자동으로 줄어든다.
+       border-box
+        */
+
+        .signip-container input:focus{
+            outline: none; /*테두리를 없애겠다.*/
+            border-color: blue;
+        }
+
+        /* 아이디 입력과 중복 체크 버튼을 감싸는 flex 컨테이너 */
+
+        .namegroup{
+            display: flex;
+            align-items: flex-start;
+            gap: 10px; /*요소간의 간격 */
+            margin-bottom: 15px;
+        }
+
+        .namegroup input{
+            flex: 1;
+        }
+
+        /* 종복체크 버튼 스타일 */
+
+        .namegroup button{
+            padding: 8PX 15PX;
+            background: red;
+            color: aqua;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* 버튼에 마우스를 올렸을 떄 색을 #2e1cd3으로 바꾸기 */
+
+        .namegroup button:hover{
+            background: #2e1cd3;
+        }
+
+        .email-group{
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .email-group input,
+        .email-group select{
+            height: 38px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .email-group span{
+            font-size: 16px;
+            position: relative;
+            top: 7px;
+        }
+
+        /* 회원가입 버튼 스타일 */
+        .signup-container button.signup-btn{
+            padding: 10px;
+            background: blue;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>회원가입</h2>
+        
+       <form>
+            <lable for="name">이름</lable>
+            <input type="text" id="name" placeholder="이름 입력">
+            <div class="namegroup">
+                <lable for="username">아이디</lable>
+                <input type="text" id="userid" placeholder="아이디 입력">
+                <button>중복체크</button>
+            </div>
+
+            <lable for="passeord">비밀번호</table>
+            <input type="passeord" id="passeord" placeholder="비밀번호">
+
+        <div>
+            <lable for="confirm-password">비밀번호 확인</lable>
+            <input type="passeord" id="pwcheck" placeholder="비밀번호 확인">
+        </div>
+            <table for="email">이메일</table>
+            <div>
+                <input type="text" id="email" placeholder="이메일 아이디">
+                <span>@</span>
+                <select id="email.domain">
+                    <option>
+                        gmail.com
+                    </option>
+                    <option>
+                        naver.com
+                    </option>
+                    <option>
+                        직접 입력
+                    </option>
+                </select>
+            </div>
+            <button class="signup-btn">회원가입</button>
+        </form>
+
+        <div class="signip-like">
+            이미 계정이 있으신가요? <a href="login.html">로그인</a>
+        </div>
+
+</body>
+</html>

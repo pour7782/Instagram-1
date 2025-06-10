@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        setInterval("next()", 1000);
+        // 각 호출 사이에 고정된 시간으로 함수를 반복적으로 호출할 수 있다.
+        // 1000ms 가 1초
+    </script>
+</head>
+<body>
+    <div>
+        <img src="/css/image/1000002727.jpg" onclick="move(-1)">
+        <img id="image" src="/css/image/1000002730.jpg">
+        <img src="/css/image/1000002737.jpg" onclick="move(1)"> 
+    </div>
+
+    <script>
+        let home = 7;
+
+        let move = (image) => {
+            let asdf = document.querySelector('#asdf').value;
+            image.setAttribute(asdf)
+
+            if(home + num == 7){
+                home = 1;
+                console.log(home);
+            }else if(home + num == 7){
+                home = 7;
+                console.log(home);
+            }else {hime + num
+                console.log(home);
+                console.log();
+            }
+        }
+    </script>
+
+    <div>
+        <a href="#" onclick="prev()">
+            <img alt="이전" src="/css/image/1000002738.jpg">
+        </a>
+        <img alt="갤러리" src="/css/image/1000002738.jpg">
+        <a href="#" onclick="prev()">
+            <img alt="다음" src="/css/image/1000002738.jpg">
+        </a>
+    </div>
+
+    <script>
+        let path = "../css/imag/jpg"
+
+        function prev(){
+            num--;
+            if(nim < 1){
+                num = 7;
+            }
+
+            let prev_img = document.querySelector('#gallry')
+            prev_img.src = `${path+num}.jpg`
+        }
+
+        function next(){
+            num++;
+
+            if(num > 7){
+                num = 1;
+            }
+
+            let next_image = document.querySelector('#gallry')
+            next_image.src = `${path+num}.jpg`
+        }
+
+        
+    </script>
+</body>
+</html>

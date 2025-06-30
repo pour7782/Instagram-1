@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container board-container">
+        <div class="board-header">
+            <h1 class="mainTitle">게시판</h1>
+            <div class="board-actions">
+                <button onclick="location.href='login.html'">로그아웃</button>
+                <button onclick="location.href='personal_info.html'">개인정보 수정</button>
+            </div>
+        </div>
+        <table class="board-table">
+            <thead>
+                <tr>
+                    <th class="title-col">제목</th>
+                    <th class="author-col">작성자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>안녕하세요</td>
+                    <td>관리자</td>
+                </tr>
+                <tr>
+                    <td>공지사항</td>
+                    <td>관리자</td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+</body>
+</html>

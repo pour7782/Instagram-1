@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <a href="http://koreaisacademy.com/">
+                <img src="http://www.koreastudyroom.com/img/login_logo.jpg" alt="로고" width="64" height="64">
+            </a>
+        </header>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="userId">아이디</label>
+                <input type="text" id="userId" name="userId" autofocus>
+                <p class="error-message" id="userIdError"></p>
+            </div>
+            <div class="form-group">
+                <label for="userPw">비밀번호</label>
+                <input type="password" id="userPw" name="userPw">
+                <p class="error-message" id="userPwError"></p>
+            </div>
+            <button type="submit">로그인</button>
+        </form>
+    </div>
+</body>
+</html>
